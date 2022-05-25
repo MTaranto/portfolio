@@ -1,0 +1,149 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 70px;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+header .logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+header .menu {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header .menu-line {
+  height: 3px;
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+.container .leftside {
+  background-color: #3b576d;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 150px;
+}
+.container .rightside {
+  background-image: url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center top;
+  flex: 1;
+}
+.container .info {
+  color: #fff;
+}
+.container .info .role {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+}
+.container .info .name {
+  font-size: 75px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.info a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #fff;
+  color: #3b576d;
+  padding: 12px 20px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0px 0px 10px #222;
+  margin-right: 10px;
+}
+.info a.light {
+  color: #fff;
+  background-color: #3b576d;
+}
+.info a:hover {
+  opacity: 0.8;
+}
+footer {
+  position: fixed;
+  left: 70px;
+  bottom: 30px;
+  color: #fff;
+  font-size: 13px;
+}
+footer a {
+  color: #fff;
+  font-style: italic;
+}
+
+@media (min-width: 426px) and (max-width: 850px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .leftside {
+    padding: 0;
+    justify-content: center;
+  }
+  header .menu-line {
+    background-color: #fff;
+  }
+  footer, footer a {
+    color: #000;
+    font-size: 16px;
+  }
+}
+@media (max-width: 425px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .leftside {
+    padding: 0;
+    justify-content: center;
+  }
+  .container .leftside .name {
+    font-size: 50px;
+    margin-top: 20px;
+  }
+  .container .leftside .role {
+    font-size: 13px;
+  }
+  .container .buttons a {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+    max-width: 150px;
+  }
+  header {
+    padding: 20px
+  }
+  header .menu-line {
+    background-color: #fff;
+  }
+  footer, footer a {
+    color: #000;
+    font-size: 13px;
+    left: 30px;
+    padding-right: 20px;
+  }
+
+}
